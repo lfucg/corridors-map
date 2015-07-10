@@ -21,12 +21,16 @@ function initialize(){
 
   map.data.setStyle(style1);
 
-   var infowindow = new google.maps.InfoWindow();
+  var infowindow = new google.maps.InfoWindow();
 
   map.data.addListener('mouseover', function(event) {
       
       infowindow.setContent(
-        '<div class="infowindow"><p class="corridor-name">' + event.feature.getProperty('ANNO') + '</p>'
+        '<div class="infowindow">' + 
+        '<p class="corridor-name">' + event.feature.getProperty('ANNO') + '</p>' + 
+        '<p class="corridor-data">Road Class: ' + event.feature.getProperty('RDCLASS') + '</p>' +
+        '<p class="corridor-data">Maintenance Responsibility: ' + event.feature.getProperty('MAINTENANC') + '</p>'
+
         );
       infowindow.setPosition(event.latLng)
       infowindow.open(map);
@@ -90,8 +94,6 @@ function initialize(){
     map.setZoom(15)
   });
   // [END region_getplaces]
-
-
 
   // Bias the SearchBox results towards places that are within the bounds of the
   // current map's viewport.
