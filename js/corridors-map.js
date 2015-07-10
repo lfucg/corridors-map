@@ -21,17 +21,18 @@ function initialize(){
 
   map.data.setStyle(style1);
 
-   var infowindow = new google.maps.InfoWindow();
-
   map.data.addListener('mouseover', function(event) {
-      
-      infowindow.setContent(
-        '<div class="infowindow"><p class="corridor-name">' + event.feature.getProperty('ANNO') + '</p>'
-        );
-      infowindow.setPosition(event.latLng)
-      infowindow.open(map);
+  map.data.revertStyle();	
+  map.data.overrideStyle(event.feature, {strokeWeight: 8, strokeColor: '#1ABC9C'});
+  document.getElementById('corridor-info').innerHTML = '<div class="infowindow">'
+  		+ '<p>You have selected:</p>'
+        + '<p class="corridor-name">' + event.feature.getProperty('ANNO') + '</p>'
+        + '<p class="corridor-data">Road Class: ' + event.feature.getProperty('RDCLASS') + '</p>'
+        + '<p class="corridor-data">Maintenance Responsibility: ' + event.feature.getProperty('MAINTENANC') + '</p>'
+
   });
-  
+ 
+
   map.data.loadGeoJson('data/corridors.geojson')
 
   var defaultBounds = new google.maps.LatLngBounds(
