@@ -22,6 +22,7 @@ function initialize(){
   map.data.setStyle(style1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   var infowindow = new google.maps.InfoWindow();
 
   map.data.addListener('mouseover', function(event) {
@@ -46,9 +47,19 @@ function initialize(){
         + '<p class="corridor-data">Maintenance Responsibility: ' + event.feature.getProperty('MAINTENANC') + '</p>'
 
 >>>>>>> origin/gh-pages
-  });
- 
+=======
+   var infowindow = new google.maps.InfoWindow();
 
+  map.data.addListener('mouseover', function(event) {
+      
+      infowindow.setContent(
+        '<div class="infowindow"><p class="corridor-name">' + event.feature.getProperty('ANNO') + '</p>'
+        );
+      infowindow.setPosition(event.latLng)
+      infowindow.open(map);
+>>>>>>> parent of 02c276a... Update Corridors Map
+  });
+  
   map.data.loadGeoJson('data/corridors.geojson')
 
   var defaultBounds = new google.maps.LatLngBounds(
