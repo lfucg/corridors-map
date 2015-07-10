@@ -21,8 +21,7 @@ function initialize(){
 
   map.data.setStyle(style1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   var infowindow = new google.maps.InfoWindow();
 
   map.data.addListener('mouseover', function(event) {
@@ -36,7 +35,6 @@ function initialize(){
         );
       infowindow.setPosition(event.latLng)
       infowindow.open(map);
-=======
   map.data.addListener('mouseover', function(event) {
   map.data.revertStyle();	
   map.data.overrideStyle(event.feature, {strokeWeight: 8, strokeColor: '#1ABC9C'});
@@ -46,8 +44,7 @@ function initialize(){
         + '<p class="corridor-data">Road Class: ' + event.feature.getProperty('RDCLASS') + '</p>'
         + '<p class="corridor-data">Maintenance Responsibility: ' + event.feature.getProperty('MAINTENANC') + '</p>'
 
->>>>>>> origin/gh-pages
-=======
+
    var infowindow = new google.maps.InfoWindow();
 
   map.data.addListener('mouseover', function(event) {
@@ -57,14 +54,14 @@ function initialize(){
         );
       infowindow.setPosition(event.latLng)
       infowindow.open(map);
->>>>>>> parent of 02c276a... Update Corridors Map
+
   });
   
   map.data.loadGeoJson('data/corridors.geojson')
 
   var defaultBounds = new google.maps.LatLngBounds(
-      new google.maps.LatLng(37.921971, -84.663139),
-      new google.maps.LatLng(38.155595, -84.334923)
+      new google.maps.LatLng(38.00536101289634, -84.54357147216797),
+      new google.maps.LatLng(38.0694467480777, -84.45568084716797)
       );
   
   map.fitBounds(defaultBounds);
