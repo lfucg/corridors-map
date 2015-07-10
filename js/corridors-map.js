@@ -36,8 +36,8 @@ function initialize(){
   map.data.loadGeoJson('data/corridors.geojson')
 
   var defaultBounds = new google.maps.LatLngBounds(
-      new google.maps.LatLng(37.921971, -84.663139),
-      new google.maps.LatLng(38.155595, -84.334923)
+      new google.maps.LatLng(38.00536101289634, -84.54357147216797),
+      new google.maps.LatLng(38.0694467480777, -84.45568084716797)
       );
   
   map.fitBounds(defaultBounds);
