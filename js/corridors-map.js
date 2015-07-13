@@ -24,11 +24,10 @@ function initialize(){
   map.data.addListener('mouseover', function(event) {
   map.data.revertStyle();	
   map.data.overrideStyle(event.feature, {strokeWeight: 8, strokeColor: '#1ABC9C'});
-  document.getElementById('corridor-info').innerHTML = '<div class="infowindow">'
-        + '<p class="corridor-name">' + event.feature.getProperty('ANNO') + '</p>'
+  document.getElementById('corridor-info').innerHTML = 
+        '<p class="corridor-name">' + event.feature.getProperty('ANNO') + '</p>'
         + '<p class="corridor-data">Road Class: ' + event.feature.getProperty('RDCLASS') + '</p>'
         + '<p class="corridor-data">Maintenance Responsibility: ' + event.feature.getProperty('MAINTENANC') + '</p>'
-
   });
  
 
