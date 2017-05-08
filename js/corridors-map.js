@@ -61,7 +61,7 @@ function initialize(){
 
   });
   
-  map.data.loadGeoJson('data/corridors.geojson')
+  map.data.loadGeoJson('data/corridors05082017.geojson')
 
   var defaultBounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(38.00536101289634, -84.54357147216797),
