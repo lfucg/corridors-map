@@ -122,5 +122,6 @@ function initialize(){
     searchBox.setBounds(bounds);
   });
 })
+}
 
 google.maps.event.addDomListener(window, 'load', initialize);
