@@ -42,14 +42,9 @@ function initialize(){
         '<p class="corridor-name">' + event.feature.getProperty('ANNO') + '</p>'
         + '<p class="corridor-data">Road Class: ' + event.feature.getProperty('RDCLASS') + '</p>'
         + '<p class="corridor-data">Maintenance Responsibility: ' + event.feature.getProperty('MAINTENANC') + '</p>'
-<<<<<<< HEAD
-
-=======
   });
  
->>>>>>> origin/gh-pages
-
-   var infowindow = new google.maps.InfoWindow();
+  var infowindow = new google.maps.InfoWindow();
 
   map.data.addListener('mouseover', function(event) {
       
