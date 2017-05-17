@@ -121,6 +121,6 @@ function initialize(){
     var bounds = map.getBounds();
     searchBox.setBounds(bounds);
   });
-}
+})
 
 google.maps.event.addDomListener(window, 'load', initialize);
